@@ -1,0 +1,15 @@
+
+Hibernate is an ORM Framework.(release in 2001
+Hibernate ORM (Hibernate in short) is an object-relational mapping library for the Java language, providing a framework for mapping an object-oriented domain model to a traditional relational database.
+
+Spring is an IOC container (among other things)(in 2003by apache
+Basically, what Spring does is wire Objects together and provide shortcuts for painful boilerplate code. It can do that for many kinds of frameworks and Hibernate is one of the most common ones used together with Spring.
+
+Hibernate and Spring integrate well, so it will probably be best if you learn to use them in combination. Suggestion: Google for Spring Hibernate Tutorial
+
+They do different things. Hibernate is an ORM which means it figures out a good way to save your Java objects to a relational database without requiring you to write loads of SQL every time you make a change to one of your classes.
+
+Spring does a lot more, and uses hibernate to accomplish the goals I mentioned above. In short, you'll hear people say that it is a an IOC container. An IOC container, or using inversion of control has nothing to do with a database, it is just a way to design your application with respect to how your classes interact with each other. The spring suite also provides a slew of other features such as authentication and authorization for web applications, a hibernate template, and a MVC web framework.
+
+Advantage of Spring framework with hibernate
+1. Spring define HibernateTemplate class which help to save entity

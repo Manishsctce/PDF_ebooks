@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- saved from url=(0057)https://www.whizlabs.com/learn/course/quiz-result/1133217 -->
 <html lang="en" itemscope="" itemtype="http://schema.org/Organization"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script src="./Whizlabs_SAA_PT_01_files/nr-1158.min.js.download"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-9977c9d92d7ee7bb1f0",applicationID:"418830896"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <title>Whizlabs Online Certification Training Courses for Professionals (AWS, Java, PMP)</title>
@@ -32,12 +32,6 @@
     <!--[if IE]>
     <script src="https://www.whizlabs.com/learn/frontend_user/js/html5shiv.js"></script>
     <![endif]-->
-
-    <!-- main script -->
-    <script src="./Whizlabs_SAA_PT_01_files/jquery-1.9.1.min.js.download"></script>
-
-    <!-- general script -->
-    <script src="./Whizlabs_SAA_PT_01_files/script.js.download"></script>
 
         <style type="text/css">
         .has-error {
@@ -170,7 +164,7 @@
 
 
 <style>.cke{visibility:hidden;}</style><style type="text/css">/* Chart.js */
-@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style><script type="text/javascript" src="./Whizlabs_SAA_PT_01_files/config.js.download"></script><link rel="stylesheet" type="text/css" href="./Whizlabs_SAA_PT_01_files/editor.css"><script type="text/javascript" src="./Whizlabs_SAA_PT_01_files/en.js.download"></script><script type="text/javascript" src="./Whizlabs_SAA_PT_01_files/styles.js.download"></script><script type="text/javascript" src="./Whizlabs_SAA_PT_01_files/plugin.js.download"></script><link rel="stylesheet" type="text/css" href="./Whizlabs_SAA_PT_01_files/scayt.css"><link rel="stylesheet" type="text/css" href="./Whizlabs_SAA_PT_01_files/dialog.css"><link rel="stylesheet" type="text/css" href="./Whizlabs_SAA_PT_01_files/tableselection.css"><link rel="stylesheet" type="text/css" href="./Whizlabs_SAA_PT_01_files/wsc.css"><script type="text/javascript" src="./Whizlabs_SAA_PT_01_files/en.js(1).download"></script></head>
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style><script type="text/javascript" src="./Whizlabs_SAA_PT_01_files/config.js.download"></script><link rel="stylesheet" type="text/css" href="./Whizlabs_SAA_PT_01_files/editor.css"><script type="text/javascript" src="./Whizlabs_SAA_PT_01_files/en.js.download"></script><script type="text/javascript" src="./Whizlabs_SAA_PT_01_files/styles.js.download"></script><script type="text/javascript" src="./Whizlabs_SAA_PT_01_files/plugin.js.download"></script><link rel="stylesheet" type="text/css" href="./Whizlabs_SAA_PT_01_files/scayt.css"><link rel="stylesheet" type="text/css" href="./Whizlabs_SAA_PT_01_files/dialog.css"><link rel="stylesheet" type="text/css" href="./Whizlabs_SAA_PT_01_files/tableselection.css"><link rel="stylesheet" type="text/css" href="./Whizlabs_SAA_PT_01_files/wsc.css"></head>
 
 <body class=" report-page ">
 
@@ -196,358 +190,12 @@
 
 
 
-<!-- user Header -->
-<!-- header part -->
-    <header>
-        <div class="container">
-            <div class="header-top">
-                <a href="https://www.whizlabs.com/learn" class="logo">
-                    <img src="./Whizlabs_SAA_PT_01_files/logo.svg" alt="logo&#39;)}}">
-                </a>
-                <div class="header-right-group">
-                     <div class="search-block">
-                              <form action="https://www.whizlabs.com/learn/course/quiz-result/1133217" onsubmit="searchCourseByHeaderForm();">
-                                  <input type="text" placeholder="Search Courses" id="searchCourseByHeaderFullView" name="search-box">
-                                  <button class="btn-search"><i class="icon icon-search"></i></button>
-                              </form>
-                              <div class="search-result" id="header-course-search-result-full-view">
-
-                              </div>
-                      </div>
-                    <a href="javascript:void(0)" id="contact_us_btn" class="expert-block"><i class="icon icon-ask"></i><span>Ask Expert</span></a>
-                    
-                        
-                    
-                                            <div class="user-login-profile">
-                            <span>Hi, nirav2</span>
-                            <figure>
-                                <img src="./Whizlabs_SAA_PT_01_files/user-dummy.jpg" style="height: 32px; width: 32px">
-                            </figure>
-                            <ul class="user-profile-dropdown">
-                                <li><a href="https://www.whizlabs.com/learn">Dashboard</a></li>
-
-                                
-                                <li><a href="https://www.whizlabs.com/learn/my-profile">Profile</a></li>
-                                <li><a href="https://www.whizlabs.com/learn/logout" onclick="event.preventDefault();document.getElementById(&#39;logout-form&#39;).submit();" id="logout_data">Logout</a></li>
-                            </ul>
-
-                        </div>
-                                    </div>
-                <div class="hamburger"></div>
-            </div>
-            <nav>
-                <ul>
-                    <li class="dashboard ">
-                        <a href="https://www.whizlabs.com/learn">Dashboard</a>
-                    </li>
-                    <li class="notes ">
-                        <a href="https://www.whizlabs.com/learn/my-courses">My Courses</a>
-                    </li>
-                    <li class="course ">
-                        <a href="https://www.whizlabs.com/learn/courses">All Courses</a>
-                    </li>
-                                        <li class="inbox ">
-                        <a href="https://www.whizlabs.com/learn/inbox">Inbox</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="mobile-nav">
-                                <div class="user-profile">
-                    <span>Hi, nirav2</span>
-                    <figure>
-                        <img src="./Whizlabs_SAA_PT_01_files/user-dummy.jpg" style="height: 32px; width: 32px">
-                    </figure>
-                </div>
-                                <ul>
-                    <li class="dashboard">
-                        <a href="https://www.whizlabs.com/learn">Dashboard</a>
-                    </li>
-                    <li class="notes">
-                        <a href="https://www.whizlabs.com/learn/my-courses">My Courses</a>
-                    </li>
-                    <li class="course">
-                        <a href="https://www.whizlabs.com/learn/courses">All Courses</a>
-                    </li>
-                    <li class="inbox">
-                        <a href="https://www.whizlabs.com/learn/inbox">Inbox</a>
-                    </li>
-                    <li class="inbox">
-                        <a href="javascript:void(0)" class="expert-block">Ask Expert</a>
-                    </li>
-                    <li class="inbox">
-                        <a href="https://www.whizlabs.com/learn/inbox">Notification</a>
-                    </li>
-                    <li class="inbox">
-                        <a href="https://www.whizlabs.com/learn/my-profile">Profile</a>
-                    </li>
-                    <li class="inbox">
-                        <a onclick="event.preventDefault();document.getElementById(&#39;logout-form&#39;).submit();" id="logout_data" href="https://www.whizlabs.com/learn/logout">Logout</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>
-
-    <form id="logout-form" action="https://www.whizlabs.com/learn/logout" method="POST" style="display: none;">
-        <input type="hidden" name="_token" value="Jqh7UpZuYQ5fDZgXQxAwByS0QZX6NbFCFE2V2RKS">
-    </form>
-
 <!--======= Content ======-->
 
         
     <!-- content area part -->
     <div id="content-area">
-        <div class="container">
-            <div class="breadcrumb-block">
-                <ul class="breadcrumb">
-                    <li><a href="https://www.whizlabs.com/learn"><i class="fa fa-home"></i></a></li>
-                    <li><a href="https://www.whizlabs.com/learn/my-courses">My Courses</a></li>
-                    <li>
-                        <a href="https://www.whizlabs.com/learn/course/aws-csaa-practice-tests#section-1">AWS Certified Solutions Architect Associate</a>
-                    </li>
-                    <li>
-                        <a href="https://www.whizlabs.com/learn/course/aws-csaa-practice-tests/quiz/14721">CSAA Practice Test 1</a>
-                    </li>
-                    <li class="active"><b>Report</b></li>
-                </ul>
-            </div>
-
-            <div class="main-content">
-                <div class="search-block">
-         <form action="https://www.whizlabs.com/learn/course/quiz-result/1133217" onsubmit="searchCourseByHeaderForm();">
-             <input type="text" placeholder="Search Courses" id="searchCourseByHeaderMobileView" name="search-box">
-             <button class="btn-search"><i class="icon icon-search"></i></button>
-         </form>
-         <div class="search-result" id="header-course-search-result-mobile-view">
-
-         </div>
- </div>
-                <div class="exam-report">
-
-
-
-  
-
-
-
-                  <div class="report-section">
-          						<div class="report-heading">
-          							<div class="title">CSAA Practice Test 1</div>
-          							<div class="complated-date">Completed on 06-February-2020 </div>
-          						</div>
-
-                      
-
-                      <div class="reports">
-        							<ul>
-        								<li>
-        									<figure>
-        										  <img src="./Whizlabs_SAA_PT_01_files/attempt.svg" alt="">
-        									</figure>
-        									<h6>Attempt</h6>
-        									<span>51</span>
-        								</li>
-        								<li>
-        									<figure>
-        										<img src="./Whizlabs_SAA_PT_01_files/marked.svg" alt="">
-        									</figure>
-        									<h6>Marks Obtained</h6>
-        									<span>6 / 65</span>
-        								</li>
-        								<li>
-        									<figure>
-        										<img src="./Whizlabs_SAA_PT_01_files/score.svg" alt="">
-        									</figure>
-        									<h6>Your score</h6>
-        									<span>9.23%</span>
-        								</li>
-        								<li>
-        									<figure>
-        										<img src="./Whizlabs_SAA_PT_01_files/time.svg" alt="">
-        									</figure>
-        									<h6>Time Taken</h6>
-        									<span>      00 H 25 M 16 S                                                    </span>
-        								</li>
-                                                  <li class="fail-block">
-          									<figure>
-                              <img src="./Whizlabs_SAA_PT_01_files/fail.svg" alt="">
-          									</figure>
-          									<h6>Result</h6>
-          									<span class="fail-txt">Failed</span>
-          								</li>
-                                							</ul>
-        						</div>
-
-          					</div>
-
-
-
-                    
-
-
-                                        <div class="domains">
-                        <div class="domain-title">Domains wise Quiz Performance Report</div>
-
-                          <table id="data">
-                            <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Domain</th>
-                                <th>Total Question</th>
-                                <th>Correct</th>
-                                <th>Incorrect</th>
-                                <th>Unattempted</th>
-                                <th>Marked as Review</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                                                                        <tr onclick="showresultanswersbytitle(&#39;Define Operationally-Excellent Architectures&#39;)">
-                                    <td><label>No</label>
-                                        <value>1</value>
-                                    </td>
-                                    <td><label>Domain</label>
-                                        <value><a href="javascript:;">Define Operationally-Excellent Architectures</a></value>
-                                    </td>
-                                    <td><label>Total Question</label>
-                                        <value>8</value>
-                                    </td>
-                                    <td><label>Correct</label>
-                                        <value>0</value>
-                                    </td>
-                                    <td><label>Incorrect</label>
-                                        <value>0</value>
-                                    </td>
-                                    <td><label>Unattempted</label>
-                                        <value>8</value>
-                                    </td>
-                                    <td><label>Marked for review</label>
-                                        <value>0</value>
-                                    </td>
-                                </tr>
-                                                                                            <tr onclick="showresultanswersbytitle(&#39;Design Resilient Architectures&#39;)">
-                                    <td><label>No</label>
-                                        <value>2</value>
-                                    </td>
-                                    <td><label>Domain</label>
-                                        <value><a href="javascript:;">Design Resilient Architectures</a></value>
-                                    </td>
-                                    <td><label>Total Question</label>
-                                        <value>22</value>
-                                    </td>
-                                    <td><label>Correct</label>
-                                        <value>1</value>
-                                    </td>
-                                    <td><label>Incorrect</label>
-                                        <value>1</value>
-                                    </td>
-                                    <td><label>Unattempted</label>
-                                        <value>20</value>
-                                    </td>
-                                    <td><label>Marked for review</label>
-                                        <value>0</value>
-                                    </td>
-                                </tr>
-                                                                                            <tr onclick="showresultanswersbytitle(&#39;Design Cost-Optimized Architectures&#39;)">
-                                    <td><label>No</label>
-                                        <value>3</value>
-                                    </td>
-                                    <td><label>Domain</label>
-                                        <value><a href="javascript:;">Design Cost-Optimized Architectures</a></value>
-                                    </td>
-                                    <td><label>Total Question</label>
-                                        <value>6</value>
-                                    </td>
-                                    <td><label>Correct</label>
-                                        <value>3</value>
-                                    </td>
-                                    <td><label>Incorrect</label>
-                                        <value>0</value>
-                                    </td>
-                                    <td><label>Unattempted</label>
-                                        <value>3</value>
-                                    </td>
-                                    <td><label>Marked for review</label>
-                                        <value>0</value>
-                                    </td>
-                                </tr>
-                                                                                            <tr onclick="showresultanswersbytitle(&#39;Define Performant Architectures&#39;)">
-                                    <td><label>No</label>
-                                        <value>4</value>
-                                    </td>
-                                    <td><label>Domain</label>
-                                        <value><a href="javascript:;">Define Performant Architectures</a></value>
-                                    </td>
-                                    <td><label>Total Question</label>
-                                        <value>19</value>
-                                    </td>
-                                    <td><label>Correct</label>
-                                        <value>1</value>
-                                    </td>
-                                    <td><label>Incorrect</label>
-                                        <value>0</value>
-                                    </td>
-                                    <td><label>Unattempted</label>
-                                        <value>18</value>
-                                    </td>
-                                    <td><label>Marked for review</label>
-                                        <value>0</value>
-                                    </td>
-                                </tr>
-                                                                                            <tr onclick="showresultanswersbytitle(&#39;Specify Secure Applications and Architectures&#39;)">
-                                    <td><label>No</label>
-                                        <value>5</value>
-                                    </td>
-                                    <td><label>Domain</label>
-                                        <value><a href="javascript:;">Specify Secure Applications and Architectures</a></value>
-                                    </td>
-                                    <td><label>Total Question</label>
-                                        <value>10</value>
-                                    </td>
-                                    <td><label>Correct</label>
-                                        <value>1</value>
-                                    </td>
-                                    <td><label>Incorrect</label>
-                                        <value>0</value>
-                                    </td>
-                                    <td><label>Unattempted</label>
-                                        <value>9</value>
-                                    </td>
-                                    <td><label>Marked for review</label>
-                                        <value>0</value>
-                                    </td>
-                                </tr>
-                                                            
-                            </tbody>
-                            <tfoot>
-                            <tr>
-                            </tr><tr class="containers" onclick="showresultanswersbytitle(&#39;ALL_TOPICS&#39;)">
-                                <td><label>Total</label>
-                                    <value>Total</value>
-                                </td>
-                                <td><label>All Domain</label>
-                                    <value><a href="javascript:;">All Domain</a></value>
-                                </td>
-                                <td><label>Total Question</label>
-                                    <value>65</value>
-                                </td>
-                                <td><label>Correct</label>
-                                    <value>6</value>
-                                </td>
-                                <td><label>Incorrect</label>
-                                    <value>1</value>
-                                </td>
-                                <td><label>Unattempted</label>
-                                    <value>58</value>
-                                </td>
-                                <td><label>Marked for review</label>
-                                    <value>0</value>
-                                </td>
-                            </tr>
-                            </tfoot>
-                        </table>
-
-                    </div>
-                </div>
+        <div class="container">                
 
                 <input type="hidden" name="correct_value_count" id="correct_value_count" value="6">
                 <input type="hidden" name="incorrect_value_count" id="incorrect_value_count" value="1">
@@ -621,7 +269,7 @@
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_44848" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -697,35 +345,6 @@
                       		             <a target="_blank" href="https://play.whizlabs.com/site/lms_login?course_id=153&amp;lab_id=46&amp;points=10&amp;user_id=522810&amp;email=poornank.nirav04@gmail.com&amp;username=poornank.nirav04@gmail.com&amp;token=80c8385deb798f04b6e2547051fdf923&amp;ref=https%3A%2F%2Fplay.whizlabs.com%2Fsite%2Ftask_details%3Ftask_id%3D17%26quest_id%3D35&amp;back=http%3A%2F%2Fstaging.whizlabs.com%2Flearn" class="default-btn ">Try Now</a>
                       							</div>
                                 </div>
-                                                    
-                        <div class="solution-block">
-                            <a href="javascript:;" class="ask_expert_click gray-btn" onclick="return openModel(14721,44848,1);">Ask our Experts</a>
-
-                            <div class="imporovement-block">
-                                                            <div class="improve-que">
-                                <input type="hidden" value="Define Operationally-Excellent Architectures" id="domainValue-1">
-                                <a class="gray-btn" href="javascript:void(0)" onclick="return improveQuestions(14721,44848,1)" id="improveque">Improve this Question?</a>
-                              </div>
-                                                        
-                            <div class="rate-block">
-                                <label>Rate this Question?</label>
-                                
-                                
-
-                                <label style="cursor: pointer;" class="icon icon-happy-emoji question_like_emoji44848   modal-like-event ">
-                                    <input style="display:none;" type="radio" name="like-44848" onclick="return likeQuestion(44848,1);" class="like-44848" id="like-44848">
-                                    <span class="checkmark" href="javascript:;"></span>
-                                </label>
-                                <label style="cursor: pointer;" class="icon icon-sad-emoji question_unlike_emoji44848 " id="dislike">
-                                    <input style="display:none;" type="radio" name="dis-like-44848" onclick="return unlikeQuestion(44848,1);" id="dis-like-44848">
-                                    <span class="checkmark" href="javascript:;"></span>
-                                </label>
-
-                                <span style="display:none;color:red;" class="feedbackAlreadyVoted44848"><b>Already Voted!!</b></span>
-
-                            </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                                 
@@ -758,8 +377,8 @@
 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style incorrect-ans">
-                                        <input type="checkbox" name="checkbox" disabled="" checked="checked">
+                                    <label for="btn-checkbox1" class="custom-style in">
+                                        <input type="checkbox" name="checkbox" disabled="" >
                                         
                                         <spam class="checkbox-style"></spam>
                                         <spam style="margin-left: 17px;font-weight: 500;">A.</spam>
@@ -800,7 +419,7 @@
                                 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style correct-ans">
+                                    <label for="btn-checkbox1" class="custom-style ">
                                         <input type="checkbox" name="checkbox" disabled="">
                                         
                                         <spam class="checkbox-style"></spam>
@@ -814,8 +433,8 @@
                                 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style correct-ans">
-                                        <input type="checkbox" name="checkbox" disabled="" checked="checked">
+                                    <label for="btn-checkbox1" class="custom-style ">
+                                        <input type="checkbox" name="checkbox" disabled="" >
                                         
                                         <spam class="checkbox-style"></spam>
                                         <spam style="margin-left: 17px;font-weight: 500;">E.</spam>
@@ -868,36 +487,6 @@ Option E- US West 2a-3 , US West 2b - 3, US West 2c-3</p>
 In this scenario, we need to have 6 instances running all the time even when 1 AZ is down.<br>
 <br>
 Hence options D &amp; E are correct.</p>
-                        </div>
-
-                                                                                                        
-                        <div class="solution-block">
-                            <a href="javascript:;" class="ask_expert_click gray-btn" onclick="return openModel(14721,36835,2);">Ask our Experts</a>
-
-                            <div class="imporovement-block">
-                                                            <div class="improve-que">
-                                <input type="hidden" value="Design Resilient Architectures" id="domainValue-2">
-                                <a class="gray-btn" href="javascript:void(0)" onclick="return improveQuestions(14721,36835,2)" id="improveque">Improve this Question?</a>
-                              </div>
-                                                        
-                            <div class="rate-block">
-                                <label>Rate this Question?</label>
-                                
-                                
-
-                                <label style="cursor: pointer;" class="icon icon-happy-emoji question_like_emoji36835   modal-like-event ">
-                                    <input style="display:none;" type="radio" name="like-36835" onclick="return likeQuestion(36835,2);" class="like-36835" id="like-36835">
-                                    <span class="checkmark" href="javascript:;"></span>
-                                </label>
-                                <label style="cursor: pointer;" class="icon icon-sad-emoji question_unlike_emoji36835 " id="dislike">
-                                    <input style="display:none;" type="radio" name="dis-like-36835" onclick="return unlikeQuestion(36835,2);" id="dis-like-36835">
-                                    <span class="checkmark" href="javascript:;"></span>
-                                </label>
-
-                                <span style="display:none;color:red;" class="feedbackAlreadyVoted36835"><b>Already Voted!!</b></span>
-
-                            </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -965,8 +554,8 @@ Hence options D &amp; E are correct.</p>
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
-                                        <input type="radio" name="radio_36836" disabled="" checked="checked">
+                                    <label for="btn-radio1" class="custom-style ">
+                                        <input type="radio" name="radio_36836" disabled="" >
                                         ]
                                         <spam class="radio-style"></spam>
                                         <spam style="margin-left: 17px;font-weight: 500;">D.</spam>
@@ -1115,8 +704,8 @@ Hence options D &amp; E are correct.</p>
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
-                                        <input type="radio" name="radio_36837" disabled="" checked="checked">
+                                    <label for="btn-radio1" class="custom-style ">
+                                        <input type="radio" name="radio_36837" disabled="" >
                                         ]
                                         <spam class="radio-style"></spam>
                                         <spam style="margin-left: 17px;font-weight: 500;">D.</spam>
@@ -1241,7 +830,7 @@ Hence options D &amp; E are correct.</p>
 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style correct-ans">
+                                    <label for="btn-checkbox1" class="custom-style ">
                                         <input type="checkbox" name="checkbox" disabled="">
                                         
                                         <spam class="checkbox-style"></spam>
@@ -1283,7 +872,7 @@ Hence options D &amp; E are correct.</p>
                                 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style correct-ans">
+                                    <label for="btn-checkbox1" class="custom-style ">
                                         <input type="checkbox" name="checkbox" disabled="">
                                         
                                         <spam class="checkbox-style"></spam>
@@ -1432,8 +1021,8 @@ Hence options D &amp; E are correct.</p>
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
-                                        <input type="radio" name="radio_36839" disabled="" checked="checked">
+                                    <label for="btn-radio1" class="custom-style ">
+                                        <input type="radio" name="radio_36839" disabled="" >
                                         ]
                                         <spam class="radio-style"></spam>
                                         <spam style="margin-left: 17px;font-weight: 500;">C.</spam>
@@ -1607,8 +1196,8 @@ HDD-backed volumes are optimized for large streaming workloads where&nbsp;<stron
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
-                                        <input type="radio" name="radio_44849" disabled="" checked="checked">
+                                    <label for="btn-radio1" class="custom-style ">
+                                        <input type="radio" name="radio_44849" disabled="" >
                                         ]
                                         <spam class="radio-style"></spam>
                                         <spam style="margin-left: 17px;font-weight: 500;">D.</spam>
@@ -1754,8 +1343,8 @@ HDD-backed volumes are optimized for large streaming workloads where&nbsp;<stron
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
-                                        <input type="radio" name="radio_44850" disabled="" checked="checked">
+                                    <label for="btn-radio1" class="custom-style ">
+                                        <input type="radio" name="radio_44850" disabled="" >
                                         ]
                                         <spam class="radio-style"></spam>
                                         <spam style="margin-left: 17px;font-weight: 500;">D.</spam>
@@ -1868,8 +1457,8 @@ HDD-backed volumes are optimized for large streaming workloads where&nbsp;<stron
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
-                                        <input type="radio" name="radio_36842" disabled="" checked="checked">
+                                    <label for="btn-radio1" class="custom-style ">
+                                        <input type="radio" name="radio_36842" disabled="" >
                                         ]
                                         <spam class="radio-style"></spam>
                                         <spam style="margin-left: 17px;font-weight: 500;">B.</spam>
@@ -2003,7 +1592,7 @@ HDD-backed volumes are optimized for large streaming workloads where&nbsp;<stron
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_46780" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -2173,7 +1762,7 @@ HDD-backed volumes are optimized for large streaming workloads where&nbsp;<stron
                                 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style correct-ans">
+                                    <label for="btn-checkbox1" class="custom-style ">
                                         <input type="checkbox" name="checkbox" disabled="">
                                         
                                         <spam class="checkbox-style"></spam>
@@ -2201,7 +1790,7 @@ HDD-backed volumes are optimized for large streaming workloads where&nbsp;<stron
                                 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style correct-ans">
+                                    <label for="btn-checkbox1" class="custom-style ">
                                         <input type="checkbox" name="checkbox" disabled="">
                                         
                                         <spam class="checkbox-style"></spam>
@@ -2339,7 +1928,7 @@ HDD-backed volumes are optimized for large streaming workloads where&nbsp;<stron
                                 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style correct-ans">
+                                    <label for="btn-checkbox1" class="custom-style ">
                                         <input type="checkbox" name="checkbox" disabled="">
                                         
                                         <spam class="checkbox-style"></spam>
@@ -2353,7 +1942,7 @@ HDD-backed volumes are optimized for large streaming workloads where&nbsp;<stron
                                 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style correct-ans">
+                                    <label for="btn-checkbox1" class="custom-style ">
                                         <input type="checkbox" name="checkbox" disabled="">
                                         
                                         <spam class="checkbox-style"></spam>
@@ -2552,7 +2141,7 @@ What would the architect do to maximize the Amazon S3 performance?</p></div>
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36846" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -2690,7 +2279,7 @@ What would the architect do to maximize the Amazon S3 performance?</p></div>
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36847" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -2790,7 +2379,7 @@ What would the architect do to maximize the Amazon S3 performance?</p></div>
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36848" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -2914,7 +2503,7 @@ What would the architect do to maximize the Amazon S3 performance?</p></div>
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36849" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -3000,34 +2589,7 @@ What would the architect do to maximize the Amazon S3 performance?</p></div>
                       							</div>
                                 </div>
                                                     
-                        <div class="solution-block">
-                            <a href="javascript:;" class="ask_expert_click gray-btn" onclick="return openModel(14721,36849,16);">Ask our Experts</a>
-
-                            <div class="imporovement-block">
-                                                            <div class="improve-que">
-                                <input type="hidden" value="Design Resilient Architectures" id="domainValue-16">
-                                <a class="gray-btn" href="javascript:void(0)" onclick="return improveQuestions(14721,36849,16)" id="improveque">Improve this Question?</a>
-                              </div>
-                                                        
-                            <div class="rate-block">
-                                <label>Rate this Question?</label>
-                                
-                                
-
-                                <label style="cursor: pointer;" class="icon icon-happy-emoji question_like_emoji36849   modal-like-event ">
-                                    <input style="display:none;" type="radio" name="like-36849" onclick="return likeQuestion(36849,16);" class="like-36849" id="like-36849">
-                                    <span class="checkmark" href="javascript:;"></span>
-                                </label>
-                                <label style="cursor: pointer;" class="icon icon-sad-emoji question_unlike_emoji36849 " id="dislike">
-                                    <input style="display:none;" type="radio" name="dis-like-36849" onclick="return unlikeQuestion(36849,16);" id="dis-like-36849">
-                                    <span class="checkmark" href="javascript:;"></span>
-                                </label>
-
-                                <span style="display:none;color:red;" class="feedbackAlreadyVoted36849"><b>Already Voted!!</b></span>
-
-                            </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
                                 
@@ -3072,7 +2634,7 @@ What would the architect do to maximize the Amazon S3 performance?</p></div>
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36850" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -3211,7 +2773,7 @@ When&nbsp;you are building large architectures repeatedly, you can use the cloud
                             <div class="answers-block">
 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36851" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -3339,7 +2901,7 @@ When&nbsp;you are building large architectures repeatedly, you can use the cloud
                             <div class="answers-block">
 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36852" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -3488,7 +3050,7 @@ Which steps would&nbsp;satisfy the security policy?&nbsp;<br>
 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style correct-ans">
+                                    <label for="btn-checkbox1" class="custom-style ">
                                         <input type="checkbox" name="checkbox" disabled="">
                                         
                                         <spam class="checkbox-style"></spam>
@@ -3530,7 +3092,7 @@ Which steps would&nbsp;satisfy the security policy?&nbsp;<br>
                                 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style correct-ans">
+                                    <label for="btn-checkbox1" class="custom-style ">
                                         <input type="checkbox" name="checkbox" disabled="">
                                         
                                         <spam class="checkbox-style"></spam>
@@ -3670,7 +3232,7 @@ Which steps would&nbsp;satisfy the security policy?&nbsp;<br>
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36854" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -3811,7 +3373,7 @@ Which steps would&nbsp;satisfy the security policy?&nbsp;<br>
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36855" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -3962,7 +3524,7 @@ Which steps would&nbsp;satisfy the security policy?&nbsp;<br>
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_44851" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -4074,7 +3636,7 @@ Which steps would&nbsp;satisfy the security policy?&nbsp;<br>
                             <div class="answers-block">
 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36857" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -4198,7 +3760,7 @@ Which steps would&nbsp;satisfy the security policy?&nbsp;<br>
                             <div class="answers-block">
 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36858" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -4347,7 +3909,7 @@ Which steps would&nbsp;satisfy the security policy?&nbsp;<br>
                                 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style correct-ans">
+                                    <label for="btn-checkbox1" class="custom-style ">
                                         <input type="checkbox" name="checkbox" disabled="">
                                         
                                         <spam class="checkbox-style"></spam>
@@ -4375,7 +3937,7 @@ Which steps would&nbsp;satisfy the security policy?&nbsp;<br>
                                 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style correct-ans">
+                                    <label for="btn-checkbox1" class="custom-style ">
                                         <input type="checkbox" name="checkbox" disabled="">
                                         
                                         <spam class="checkbox-style"></spam>
@@ -4542,7 +4104,7 @@ Which steps would&nbsp;satisfy the security policy?&nbsp;<br>
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36860" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -4711,7 +4273,7 @@ Which steps would&nbsp;satisfy the security policy?&nbsp;<br>
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36861" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -4860,7 +4422,7 @@ DynamoDB, alongside DynamoDB Accelerator&nbsp;<strong>(DAX),&nbsp;</strong>can s
                             <div class="answers-block">
 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36862" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -5007,7 +4569,7 @@ DynamoDB, alongside DynamoDB Accelerator&nbsp;<strong>(DAX),&nbsp;</strong>can s
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36863" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -5157,7 +4719,7 @@ DynamoDB, alongside DynamoDB Accelerator&nbsp;<strong>(DAX),&nbsp;</strong>can s
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_44852" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -5276,7 +4838,7 @@ DynamoDB, alongside DynamoDB Accelerator&nbsp;<strong>(DAX),&nbsp;</strong>can s
 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style correct-ans">
+                                    <label for="btn-checkbox1" class="custom-style ">
                                         <input type="checkbox" name="checkbox" disabled="">
                                         
                                         <spam class="checkbox-style"></spam>
@@ -5290,7 +4852,7 @@ DynamoDB, alongside DynamoDB Accelerator&nbsp;<strong>(DAX),&nbsp;</strong>can s
                                 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style correct-ans">
+                                    <label for="btn-checkbox1" class="custom-style ">
                                         <input type="checkbox" name="checkbox" disabled="">
                                         
                                         <spam class="checkbox-style"></spam>
@@ -5425,7 +4987,7 @@ It can also be installed with an Elastic Beanstalk service. To enable the NGINX 
                             <div class="answers-block">
 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36866" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -5558,7 +5120,7 @@ It can also be installed with an Elastic Beanstalk service. To enable the NGINX 
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36867" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -5674,7 +5236,7 @@ It can also be installed with an Elastic Beanstalk service. To enable the NGINX 
                             <div class="answers-block">
 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36868" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -5842,7 +5404,7 @@ Please visit the following link to get more information.<br>
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36869" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -5954,7 +5516,7 @@ A PostgreSQL Read Replica reports a replication lag of up to five minutes if the
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36870" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -6089,7 +5651,7 @@ A PostgreSQL Read Replica reports a replication lag of up to five minutes if the
                                 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style correct-ans">
+                                    <label for="btn-checkbox1" class="custom-style ">
                                         <input type="checkbox" name="checkbox" disabled="">
                                         
                                         <spam class="checkbox-style"></spam>
@@ -6117,7 +5679,7 @@ A PostgreSQL Read Replica reports a replication lag of up to five minutes if the
                                 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style correct-ans">
+                                    <label for="btn-checkbox1" class="custom-style ">
                                         <input type="checkbox" name="checkbox" disabled="">
                                         
                                         <spam class="checkbox-style"></spam>
@@ -6238,7 +5800,7 @@ A PostgreSQL Read Replica reports a replication lag of up to five minutes if the
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_44853" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -6364,7 +5926,7 @@ A PostgreSQL Read Replica reports a replication lag of up to five minutes if the
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36873" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -6499,7 +6061,7 @@ A PostgreSQL Read Replica reports a replication lag of up to five minutes if the
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36874" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -6615,7 +6177,7 @@ A PostgreSQL Read Replica reports a replication lag of up to five minutes if the
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36875" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -6749,7 +6311,7 @@ A PostgreSQL Read Replica reports a replication lag of up to five minutes if the
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36876" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -6856,7 +6418,7 @@ A PostgreSQL Read Replica reports a replication lag of up to five minutes if the
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36877" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -6967,7 +6529,7 @@ A PostgreSQL Read Replica reports a replication lag of up to five minutes if the
                             <div class="answers-block">
 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36878" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -7113,7 +6675,7 @@ A PostgreSQL Read Replica reports a replication lag of up to five minutes if the
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36879" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -7240,7 +6802,7 @@ A PostgreSQL Read Replica reports a replication lag of up to five minutes if the
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36880" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -7386,7 +6948,7 @@ For more information on Auto Scaling Scheduled Scaling, please visit the followi
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36881" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -7532,7 +7094,7 @@ For more information on Restoring an Amazon EBS Volume from a Snapshot, please v
 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style correct-ans">
+                                    <label for="btn-checkbox1" class="custom-style ">
                                         <input type="checkbox" name="checkbox" disabled="">
                                         
                                         <spam class="checkbox-style"></spam>
@@ -7560,7 +7122,7 @@ For more information on Restoring an Amazon EBS Volume from a Snapshot, please v
                                 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style correct-ans">
+                                    <label for="btn-checkbox1" class="custom-style ">
                                         <input type="checkbox" name="checkbox" disabled="">
                                         
                                         <spam class="checkbox-style"></spam>
@@ -7696,7 +7258,7 @@ For more information on Restoring an Amazon EBS Volume from a Snapshot, please v
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36883" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -7829,7 +7391,7 @@ For more information on Restoring an Amazon EBS Volume from a Snapshot, please v
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36884" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -7935,7 +7497,7 @@ Volume gateway provides an iSCSI target, which enables you to create volumes and
                             <div class="answers-block">
 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36885" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -8056,7 +7618,7 @@ Volume gateway provides an iSCSI target, which enables you to create volumes and
 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style correct-ans">
+                                    <label for="btn-checkbox1" class="custom-style ">
                                         <input type="checkbox" name="checkbox" disabled="">
                                         
                                         <spam class="checkbox-style"></spam>
@@ -8070,7 +7632,7 @@ Volume gateway provides an iSCSI target, which enables you to create volumes and
                                 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style correct-ans">
+                                    <label for="btn-checkbox1" class="custom-style ">
                                         <input type="checkbox" name="checkbox" disabled="">
                                         
                                         <spam class="checkbox-style"></spam>
@@ -8220,7 +7782,7 @@ Volume gateway provides an iSCSI target, which enables you to create volumes and
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36887" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -8354,7 +7916,7 @@ Usually, when we discuss a disaster recovery scenario we assume that the entire 
                                 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style correct-ans">
+                                    <label for="btn-checkbox1" class="custom-style ">
                                         <input type="checkbox" name="checkbox" disabled="">
                                         
                                         <spam class="checkbox-style"></spam>
@@ -8368,7 +7930,7 @@ Usually, when we discuss a disaster recovery scenario we assume that the entire 
                                 
                                                                 
                                 <div class="custom-input-block">
-                                    <label for="btn-checkbox1" class="custom-style correct-ans">
+                                    <label for="btn-checkbox1" class="custom-style ">
                                         <input type="checkbox" name="checkbox" disabled="">
                                         
                                         <spam class="checkbox-style"></spam>
@@ -8514,7 +8076,7 @@ Usually, when we discuss a disaster recovery scenario we assume that the entire 
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36889" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -8640,7 +8202,7 @@ Usually, when we discuss a disaster recovery scenario we assume that the entire 
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36890" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -8757,7 +8319,7 @@ Usually, when we discuss a disaster recovery scenario we assume that the entire 
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36983" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -8911,7 +8473,7 @@ Usually, when we discuss a disaster recovery scenario we assume that the entire 
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36985" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -9020,7 +8582,7 @@ Usually, when we discuss a disaster recovery scenario we assume that the entire 
                             <div class="answers-block">
 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36987" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -9155,7 +8717,7 @@ Usually, when we discuss a disaster recovery scenario we assume that the entire 
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36988" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -9295,7 +8857,7 @@ Usually, when we discuss a disaster recovery scenario we assume that the entire 
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36992" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -9406,7 +8968,7 @@ Usually, when we discuss a disaster recovery scenario we assume that the entire 
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36994" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -9526,7 +9088,7 @@ Usually, when we discuss a disaster recovery scenario we assume that the entire 
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_36996" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -9652,7 +9214,7 @@ Usually, when we discuss a disaster recovery scenario we assume that the entire 
                                 </div>
                                 
                                                                                                 <div class="custom-input-style">
-                                    <label for="btn-radio1" class="custom-style correct-ans">
+                                    <label for="btn-radio1" class="custom-style ">
                                         <input type="radio" name="radio_44854" disabled="">
                                         ]
                                         <spam class="radio-style"></spam>
@@ -9812,7 +9374,7 @@ Usually, when we discuss a disaster recovery scenario we assume that the entire 
                                 <option value="0">What are you looking for?</option>
                                 <option value="i-like-this-question">I Like this Question</option>
                                 <option value="ambiguity-in-question">Ambiguity in question</option>
-                                <option value="incorrect-answer">Incorrect Answer</option>
+                                <option value="inwer">Incorrect Answer</option>
                                 <option value="not-satisfied-with-explanations">Not satisfied with explanations</option>
                                 <option value="reference-resource-is-not-related-to-the-answer">Reference resource is not related to the answer</option>
                                 <option value="other">Others</option>
@@ -9877,7 +9439,7 @@ Usually, when we discuss a disaster recovery scenario we assume that the entire 
 
                         <div class="custom-input-style">
                             <label class="custom-style">
-                                <input type="radio" name="feedbackStatus" value="incorrect-answer" onchange="return showFeedbackDiv();">
+                                <input type="radio" name="feedbackStatus" value="inwer" onchange="return showFeedbackDiv();">
 
                                 <spam class="radio-style"></spam>
                                 <span>Incorrect Answer</span>
